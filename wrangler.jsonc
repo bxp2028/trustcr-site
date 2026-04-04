@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "trustcr",
+  "compatibility_date": "2026-04-04",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "trustcr"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
