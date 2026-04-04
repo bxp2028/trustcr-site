@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XinRui Tech</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #1a1a2e;
+            background: #fafbfe;
+            line-height: 1.7;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #0a192f 0%, #112240 50%, #0a192f 100%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(45,212,191,0.08) 0%, transparent 70%);
+            top: -150px; right: -150px;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(99,102,241,0.06) 0%, transparent 70%);
+            bottom: -100px; left: -100px;
+        }
+
+        .company-name {
+            font-size: 1.1rem;
+            letter-spacing: 0.5em;
+            opacity: 0.5;
+            margin-bottom: 2.5rem;
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+        .hero h1 span {
+            background: linear-gradient(90deg, #2dd4bf, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 560px;
+            opacity: 0.8;
+            margin-bottom: 3rem;
+        }
+
+        /* About */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .section .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1.05rem;
+        }
+
+        /* Beliefs */
+        .beliefs {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .belief {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        .belief-line {
+            flex-shrink: 0;
+            width: 3px;
+            min-height: 60px;
+            background: linear-gradient(180deg, #2dd4bf, #818cf8);
+            border-radius: 2px;
+        }
+        .belief h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+        }
+        .belief p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        /* Product */
+        .product-section {
+            background: #f0f2f8;
+        }
+        .product-card {
+            background: #fff;
+            border: 1px solid #e0e0ea;
+            border-radius: 14px;
+            padding: 2.5rem;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.06);
+        }
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .product-card .product-tagline {
+            color: #818cf8;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .product-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        .product-link {
+            display: inline-block;
+            padding: 0.6rem 2rem;
+            background: linear-gradient(135deg, #0a192f, #112240);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 2rem;
+            font-size: 0.95rem;
+            transition: opacity 0.2s;
+        }
+        .product-link:hover { opacity: 0.85; }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+            color: #fff;
+        }
+        .contact h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        .contact p {
+            opacity: 0.7;
+            font-size: 1rem;
+        }
+        .contact a {
+            color: #2dd4bf;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #999;
+            font-size: 0.85rem;
+            background: #0a192f;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="company-name">XINRUI TECH</div>
+    <h1>度量 AI，建立<span>信任</span></h1>
+    <p>AI 不能自证可信，我们提供独立评级。</p>
+</section>
+
+<section class="section">
+    <h2>我们相信</h2>
+    <p class="subtitle">这些信念驱动我们的每一行代码</p>
+    <div class="beliefs">
+        <div class="belief">
+            <div class="belief-line"></div>
+            <div>
+                <h3>可信不是口号，是可度量的工程问题</h3>
+                <p>模型该不该被信任，不靠感觉，靠数据。我们用多维度评测体系给出可解释的答案。</p>
+            </div>
+        </div>
+        <div class="belief">
+            <div class="belief-line"></div>
+            <div>
+                <h3>没有最好的模型，只有最适合的场景</h3>
+                <p>帕累托前沿取代排行榜，帮每个模型找到自己的最佳生态位。</p>
+            </div>
+        </div>
+        <div class="belief">
+            <div class="belief-line"></div>
+            <div>
+                <h3>标准应该由实践者定义</h3>
+                <p>从真实场景中提炼评测方法论，而不是在学术真空中设计指标。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="product-section">
+    <section class="section">
+        <h2>产品</h2>
+        <p class="subtitle"></p>
+        <div class="product-card">
+            <h3>TrustCR</h3>
+            <div class="product-tagline">AI 可信度评级平台</div>
+            <p>六维度可解释评级，为 AI 建立信任标尺。覆盖安全性、工具安全、准确性、透明性、合规性与伦理性。</p>
+            <a href="https://trustcr.ai" class="product-link">访问 trustcr.ai</a>
+        </div>
+    </section>
+</div>
+
+<div class="contact">
+    <h2>联系我们</h2>
+    <p>合作洽谈：<a href="mailto:contact@xinrui.tech">contact@xinrui.tech</a></p>
+</div>
+
+<footer>
+    <p>&copy; 2026 XinRui Tech</p>
+</footer>
+
+</body>
+</html>
