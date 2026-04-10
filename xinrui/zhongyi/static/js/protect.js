@@ -30,13 +30,4 @@ window.addEventListener("beforeprint", function() {
     document.title = document.title + " — XinRui.TECH 版权所有";
 });
 
-// 检测 DevTools（基础检测）
-(function() {
-    var threshold = 160;
-    setInterval(function() {
-        if (window.outerWidth - window.innerWidth > threshold ||
-            window.outerHeight - window.innerHeight > threshold) {
-            document.body.innerHTML = "<h1 style='text-align:center;margin-top:20%;color:#8B2500;'>请关闭开发者工具</h1>";
-        }
-    }, 2000);
-})();
+// DevTools 检测已移除 — 会触发浏览器安全警告且误判率高
