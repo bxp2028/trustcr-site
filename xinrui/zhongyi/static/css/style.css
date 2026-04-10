@@ -1,14 +1,14 @@
 /* 中医知识图谱 — XinRui.TECH */
 /* 中国传统色调 */
 :root {
-    --red:     #8B2500;
-    --gold:    #B8860B;
-    --cream:   #FFF8F0;
-    --ink:     #2C2C2C;
-    --paper:   #FEFCF7;
-    --border:  #D4C5A9;
-    --green:   #2E5030;
-    --shadow:  rgba(139,37,0,0.08);
+    --red:     #1A3A5C;
+    --gold:    #3B82F6;
+    --cream:   #F0F4FA;
+    --ink:     #1E293B;
+    --paper:   #FFFFFF;
+    --border:  #CBD5E1;
+    --green:   #0F4C81;
+    --shadow:  rgba(26,58,92,0.08);
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
@@ -40,7 +40,7 @@ a:hover { text-decoration: underline; }
 }
 .navbar .brand span { color: #fff; font-weight: 400; font-size: 0.85rem; margin-left: 8px; }
 .navbar nav a {
-    color: #ffe0cc;
+    color: rgba(255,255,255,0.8);
     margin-left: 1.5rem;
     font-size: 0.95rem;
 }
@@ -52,7 +52,7 @@ a:hover { text-decoration: underline; }
     color: #ffe0cc;
     font-size: 0.9rem;
 }
-.navbar .user-info a { color: #ffe0cc; }
+.navbar .user-info a { color: rgba(255,255,255,0.8); }
 
 /* ── 布局 ─────────────────────────── */
 .container {
@@ -138,7 +138,7 @@ a:hover { text-decoration: underline; }
     border-left: 3px solid var(--gold);
     padding: 0.5rem 1rem;
     margin: 1rem 0;
-    background: #FFF5E6;
+    background: #EFF6FF;
     color: #555;
     font-style: italic;
 }
@@ -158,7 +158,7 @@ a:hover { text-decoration: underline; }
     padding: 0.5rem 0.8rem;
     border-bottom: 1px solid var(--border);
 }
-.wiki-content tr:nth-child(even) td { background: #FEFAF2; }
+.wiki-content tr:nth-child(even) td { background: #F0F4FA; }
 .wiki-content a { color: var(--red); border-bottom: 1px dashed var(--gold); }
 .wiki-content hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
 
@@ -169,7 +169,7 @@ a:hover { text-decoration: underline; }
     width: 100%; height: 100%;
     pointer-events: none;
     z-index: 9999;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Ctext transform='rotate(-25)' x='-40' y='120' fill='%238B2500' fill-opacity='0.04' font-size='18' font-family='serif'%3EXinRui.TECH%3C/text%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Ctext transform='rotate(-25)' x='-40' y='120' fill='%231A3A5C' fill-opacity='0.04' font-size='18' font-family='sans-serif'%3EXinRui.TECH%3C/text%3E%3C/svg%3E");
     background-repeat: repeat;
 }
 
@@ -179,7 +179,7 @@ a:hover { text-decoration: underline; }
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--cream) 0%, #F5E6D3 100%);
+    background: linear-gradient(135deg, var(--cream) 0%, #DBEAFE 100%);
 }
 .auth-box {
     background: var(--paper);
@@ -235,7 +235,7 @@ a:hover { text-decoration: underline; }
     letter-spacing: 2px;
     transition: background .2s;
 }
-.auth-box button:hover { background: #6B1D00; }
+.auth-box button:hover { background: #0F2D4A; }
 .auth-box .error {
     background: #FFF0F0;
     color: var(--red);
@@ -272,7 +272,7 @@ a:hover { text-decoration: underline; }
     font-size: 0.85rem;
     transition: background .2s;
 }
-.share-btn:hover { background: #9A7209; }
+.share-btn:hover { background: #2563EB; }
 
 /* ── 分享对话框 ─────────────────── */
 .modal {
@@ -316,7 +316,7 @@ a:hover { text-decoration: underline; }
     font-size: 0.95rem;
     transition: background .2s;
 }
-.share-options button:hover { background: #6B1D00; }
+.share-options button:hover { background: #0F2D4A; }
 #share-result {
     margin-bottom: 1rem;
 }
