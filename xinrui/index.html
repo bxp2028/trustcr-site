@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XinRui Tech</title>
+    <title>XinRui Tech — 用科技守护生命健康</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
             color: #1a1a2e;
             background: #fafbfe;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
-        /* Hero */
+        /* ── Hero ─────────────────────── */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -22,7 +22,7 @@
             align-items: center;
             text-align: center;
             padding: 2rem;
-            background: linear-gradient(135deg, #0a192f 0%, #112240 50%, #0a192f 100%);
+            background: linear-gradient(160deg, #0B3D2E 0%, #145A3E 40%, #1B7A52 100%);
             color: #fff;
             position: relative;
             overflow: hidden;
@@ -30,43 +30,59 @@
         .hero::before {
             content: '';
             position: absolute;
-            width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(45,212,191,0.08) 0%, transparent 70%);
-            top: -150px; right: -150px;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(46,213,150,0.1) 0%, transparent 70%);
+            top: -200px; right: -150px;
         }
         .hero::after {
             content: '';
             position: absolute;
-            width: 400px; height: 400px;
-            background: radial-gradient(circle, rgba(99,102,241,0.06) 0%, transparent 70%);
-            bottom: -100px; left: -100px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(255,215,0,0.06) 0%, transparent 70%);
+            bottom: -150px; left: -100px;
         }
-
         .company-name {
-            font-size: 1.1rem;
-            letter-spacing: 0.5em;
+            font-size: 1rem;
+            letter-spacing: 0.6em;
             opacity: 0.5;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
         .hero h1 {
-            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-size: clamp(2rem, 5vw, 3.2rem);
             font-weight: 700;
             margin-bottom: 1.5rem;
-            line-height: 1.3;
+            line-height: 1.4;
         }
         .hero h1 span {
-            background: linear-gradient(90deg, #2dd4bf, #818cf8);
+            background: linear-gradient(90deg, #2ED596, #FFD700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .hero p {
-            font-size: 1.2rem;
-            max-width: 560px;
-            opacity: 0.8;
-            margin-bottom: 3rem;
+            font-size: 1.15rem;
+            max-width: 580px;
+            opacity: 0.85;
+            margin-bottom: 2.5rem;
+        }
+        .hero-cta {
+            display: inline-block;
+            padding: 0.8rem 2.5rem;
+            background: linear-gradient(135deg, #2ED596, #1B9E6A);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 2rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 16px rgba(46,213,150,0.3);
+        }
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(46,213,150,0.4);
         }
 
-        /* About */
+        /* ── Section 通用 ─────────────── */
         .section {
             padding: 5rem 2rem;
             max-width: 900px;
@@ -75,7 +91,7 @@
         .section h2 {
             font-size: 1.8rem;
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
         .section .subtitle {
             text-align: center;
@@ -84,44 +100,122 @@
             font-size: 1.05rem;
         }
 
-        /* Beliefs */
-        .beliefs {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+        /* ── 愿景 ─────────────────────── */
+        .vision-section {
+            background: linear-gradient(180deg, #F0FAF5 0%, #fafbfe 100%);
         }
-        .belief {
-            display: flex;
-            gap: 1.5rem;
-            align-items: flex-start;
+        .vision-box {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
         }
-        .belief-line {
-            flex-shrink: 0;
-            width: 3px;
-            min-height: 60px;
-            background: linear-gradient(180deg, #2dd4bf, #818cf8);
-            border-radius: 2px;
+        .vision-box .vision-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
-        .belief h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.4rem;
+        .vision-box h2 {
+            color: #145A3E;
+            margin-bottom: 1rem;
         }
-        .belief p {
-            color: #555;
-            font-size: 1rem;
+        .vision-box p {
+            font-size: 1.15rem;
+            color: #444;
+            line-height: 2;
         }
 
-        /* Product */
-        .product-section {
-            background: #f0f2f8;
+        /* ── 使命 ─────────────────────── */
+        .mission-section {
+            background: #fff;
+        }
+        .mission-box {
+            background: linear-gradient(135deg, #0B3D2E, #1B7A52);
+            color: #fff;
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 780px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .mission-box::before {
+            content: '\201C';
+            position: absolute;
+            top: -10px; left: 20px;
+            font-size: 8rem;
+            opacity: 0.08;
+            font-family: Georgia, serif;
+        }
+        .mission-box h2 {
+            color: #fff;
+            text-align: left;
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            letter-spacing: 2px;
+        }
+        .mission-box p {
+            font-size: 1.1rem;
+            line-height: 2;
+            opacity: 0.92;
+        }
+        .mission-keywords {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .mission-keywords span {
+            padding: 0.3rem 1rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* ── 价值观 ─────────────────────── */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        .value-card {
+            background: #fff;
+            border: 1px solid #E8F0EC;
+            border-radius: 14px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+        }
+        .value-card .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+        }
+        .value-card h3 {
+            font-size: 1.25rem;
+            color: #145A3E;
+            margin-bottom: 0.5rem;
+        }
+        .value-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* ── 产品 ─────────────────────── */
+        .products-section {
+            background: #F0FAF5;
         }
         .product-card {
             background: #fff;
-            border: 1px solid #e0e0ea;
+            border: 1px solid #E0E8E4;
             border-radius: 14px;
             padding: 2.5rem;
             text-align: center;
-            max-width: 600px;
+            max-width: 520px;
             margin: 0 auto;
             transition: transform 0.2s, box-shadow 0.2s;
         }
@@ -129,24 +223,14 @@
             transform: translateY(-4px);
             box-shadow: 0 16px 32px rgba(0,0,0,0.06);
         }
-        .product-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .product-card .product-tagline {
-            color: #818cf8;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-        .product-card p {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
+        .product-card .product-icon { font-size: 2.8rem; margin-bottom: 0.8rem; }
+        .product-card h3 { font-size: 1.5rem; margin-bottom: 0.3rem; color: #1a1a2e; }
+        .product-card .tagline { color: #2ED596; font-size: 1rem; margin-bottom: 1rem; }
+        .product-card p { color: #666; font-size: 0.95rem; margin-bottom: 1.5rem; }
         .product-link {
             display: inline-block;
             padding: 0.6rem 2rem;
-            background: linear-gradient(135deg, #0a192f, #112240);
+            background: linear-gradient(135deg, #0B3D2E, #1B7A52);
             color: #fff;
             text-decoration: none;
             border-radius: 2rem;
@@ -155,86 +239,99 @@
         }
         .product-link:hover { opacity: 0.85; }
 
-        /* Contact */
+        /* ── 联系 ─────────────────────── */
         .contact {
             text-align: center;
             padding: 4rem 2rem;
-            background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+            background: linear-gradient(135deg, #0B3D2E 0%, #145A3E 100%);
             color: #fff;
         }
-        .contact h2 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-        }
-        .contact p {
-            opacity: 0.7;
-            font-size: 1rem;
-        }
-        .contact a {
-            color: #2dd4bf;
-            text-decoration: none;
-        }
+        .contact h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .contact p { opacity: 0.7; font-size: 1rem; }
+        .contact a { color: #2ED596; text-decoration: none; }
 
-        /* Footer */
+        /* ── 页脚 ─────────────────────── */
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
             color: #999;
             font-size: 0.85rem;
-            background: #0a192f;
+            background: #0B3D2E;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
     </style>
 </head>
 <body>
 
+<!-- Hero -->
 <section class="hero">
     <div class="company-name">XINRUI TECH</div>
-    <h1>度量 AI，建立<span>信任</span></h1>
-    <p>AI 不能自证可信，我们提供独立评级。</p>
+    <h1>用科技守护<span>生命健康</span></h1>
+    <p>借助公共卫生大数据与人工智能，让优质健康服务抵达中国的每一个角落。</p>
+    <a href="/zhongyi/" class="hero-cta">探索青蒿寻方</a>
 </section>
 
-<section class="section">
-    <h2>我们相信</h2>
-    <p class="subtitle">这些信念驱动我们的每一行代码</p>
-    <div class="beliefs">
-        <div class="belief">
-            <div class="belief-line"></div>
-            <div>
-                <h3>可信不是口号，是可度量的工程问题</h3>
-                <p>模型该不该被信任，不靠感觉，靠数据。我们用多维度评测体系给出可解释的答案。</p>
-            </div>
-        </div>
-        <div class="belief">
-            <div class="belief-line"></div>
-            <div>
-                <h3>没有最好的模型，只有最适合的场景</h3>
-                <p>帕累托前沿取代排行榜，帮每个模型找到自己的最佳生态位。</p>
-            </div>
-        </div>
-        <div class="belief">
-            <div class="belief-line"></div>
-            <div>
-                <h3>标准应该由实践者定义</h3>
-                <p>从真实场景中提炼评测方法论，而不是在学术真空中设计指标。</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="product-section">
+<!-- 愿景 -->
+<div class="vision-section">
     <section class="section">
-        <h2>产品</h2>
-        <p class="subtitle"></p>
-        <div class="product-card">
-            <h3>TrustCR</h3>
-            <div class="product-tagline">AI 可信度评级平台</div>
-            <p>六维度可解释评级，为 AI 建立信任标尺。覆盖安全性、工具安全、准确性、透明性、合规性与伦理性。</p>
-            <a href="https://trustcr.ai" class="product-link">访问 trustcr.ai</a>
+        <div class="vision-box">
+            <div class="vision-icon">🌏</div>
+            <h2>愿景</h2>
+            <p>帮助每个中国人、每个地方<br>拥有更好的健康和幸福。</p>
         </div>
     </section>
 </div>
 
+<!-- 使命 -->
+<div class="mission-section">
+    <section class="section">
+        <div class="mission-box">
+            <h2>我们的使命</h2>
+            <p>借助公共卫生大数据和人工智能技术，为中国的每一个角落带去健康知识与健康服务，提升健康管理的可持续性和公平性。</p>
+            <div class="mission-keywords">
+                <span>健康知识</span>
+                <span>健康服务</span>
+                <span>可持续性</span>
+                <span>公平性</span>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- 价值观 -->
+<section class="section">
+    <h2>价值观</h2>
+    <p class="subtitle">驱动我们每一行代码的信念</p>
+    <div class="values-grid">
+        <div class="value-card">
+            <div class="value-icon">📊</div>
+            <h3>数据循证</h3>
+            <p>一切决策基于数据与证据。用真实世界的健康数据验证每一个结论，用循证方法论指导每一项服务，拒绝经验主义和拍脑袋决策。</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon">🏆</div>
+            <h3>追求卓越</h3>
+            <p>对技术精度和用户体验永不妥协。每一个算法、每一条健康建议、每一次交互，都以最高标准要求自己，因为健康容不得半点马虎。</p>
+        </div>
+    </div>
+</section>
+
+<!-- 产品 -->
+<div class="products-section">
+    <section class="section">
+        <h2>产品</h2>
+        <p class="subtitle"></p>
+        <div class="product-card">
+            <div class="product-icon">🌿</div>
+            <h3>青蒿寻方</h3>
+            <div class="tagline">从古籍中，发现下一个青蒿素</div>
+            <p>屠呦呦从《肘后备急方》中发现了青蒿素。我们用 AI 系统性地阅读中医古籍，从千年文献中发掘药物、方剂与诊疗智慧，让古人的经验为今人所用。</p>
+            <a href="/zhongyi/" class="product-link">进入青蒿寻方</a>
+        </div>
+    </section>
+</div>
+
+<!-- 联系 -->
 <div class="contact">
     <h2>联系我们</h2>
     <p>合作洽谈：<a href="mailto:contact@xinrui.tech">contact@xinrui.tech</a></p>
