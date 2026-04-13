@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrustCR — AI可信度评级</title>
+    <meta name="description" content="AI 不能自证可信，我们提供独立评级。TrustCR 是人工智能领域可信度评测的独立标尺，覆盖安全、工具安全、自主决策、透明性、隐私保护、可靠性六大维度。">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -29,8 +31,8 @@
         }
         @media (max-width: 640px) {
             .hero {
-                min-height: 70vh;
-                padding: 4rem 1.5rem;
+                min-height: auto;
+                padding: 6rem 1.5rem 4rem;
             }
         }
         .hero::before {
@@ -62,7 +64,9 @@
             line-height: 1.2;
             background: linear-gradient(90deg, #818cf8, #60a5fa);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
+            color: transparent;
         }
         .hero p {
             font-size: 1.1rem;
@@ -242,10 +246,6 @@
             font-size: 0.9rem;
             border-top: 1px solid #eee;
         }
-        footer a {
-            color: #6366f1;
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
@@ -308,7 +308,7 @@
 
 <section class="adversarial">
     <div class="adversarial-inner">
-        <h2>L2 · Agent 对抗评测</h2>
+        <h2>动态对抗评测</h2>
         <p class="subtitle">静态测试掩盖真实风险，我们用动态攻防暴露它</p>
         <div class="adv-grid">
             <div class="adv-item">
