@@ -21,11 +21,17 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 2rem 2rem 6rem;
+            padding: 2rem;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             color: #fff;
             position: relative;
             overflow: hidden;
+        }
+        @media (max-width: 640px) {
+            .hero {
+                min-height: 70vh;
+                padding: 4rem 1.5rem;
+            }
         }
         .hero::before {
             content: '';
@@ -155,7 +161,7 @@
             padding: 5rem 2rem;
         }
         .adversarial-inner {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             text-align: center;
         }
@@ -170,18 +176,23 @@
         }
         .adv-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             text-align: left;
         }
         .adv-item {
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
             border-radius: 12px;
-            padding: 1.5rem;
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .adv-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
         }
         .adv-item h3 {
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             margin-bottom: 0.5rem;
             color: #818cf8;
         }
