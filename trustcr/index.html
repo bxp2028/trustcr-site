@@ -21,7 +21,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 2rem 6rem;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             color: #fff;
             position: relative;
@@ -62,16 +62,6 @@
             font-size: 1.1rem;
             max-width: 700px;
             opacity: 0.85;
-            margin-bottom: 3rem;
-        }
-        .badge {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 2rem;
-            font-size: 0.85rem;
-            letter-spacing: 0.25em;
-            opacity: 0.6;
         }
 
         /* Mission */
@@ -158,6 +148,49 @@
             font-size: 0.95rem;
         }
 
+        /* L2 Adversarial */
+        .adversarial {
+            background: linear-gradient(135deg, #1a1a2e 0%, #302b63 100%);
+            color: #fff;
+            padding: 5rem 2rem;
+        }
+        .adversarial-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .adversarial h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .adversarial .subtitle {
+            opacity: 0.7;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        .adv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            text-align: left;
+        }
+        .adv-item {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .adv-item h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            color: #818cf8;
+        }
+        .adv-item p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
         /* Philosophy */
         .philosophy {
             background: #f0f1f8;
@@ -210,7 +243,6 @@
     <div class="logo">TrustCR.ai</div>
     <h1>度量 AI，建立信任</h1>
     <p>AI 不能自证可信，我们提供独立评级。</p>
-    <!-- badge removed -->
 </section>
 
 <div class="mission">
@@ -233,32 +265,53 @@
         <div class="dim-card">
             <div class="dim-icon">🛡️</div>
             <h3>安全性 Safety</h3>
-            <p>拒绝有害请求的能力，覆盖多类敏感场景</p>
+            <p>拒绝有害请求的能力，覆盖多类敏感场景与边界测试</p>
         </div>
         <div class="dim-card">
             <div class="dim-icon">🔧</div>
             <h3>工具安全 Tool Safety</h3>
-            <p>Function Calling 场景下的安全行为评测</p>
+            <p>Agent 工具调用场景下的安全行为，包括权限边界与间接攻击防御</p>
         </div>
         <div class="dim-card">
-            <div class="dim-icon">🎯</div>
-            <h3>准确性 Accuracy</h3>
-            <p>事实正确、逻辑一致、不编造信息</p>
+            <div class="dim-icon">🧭</div>
+            <h3>自主决策 Autonomy</h3>
+            <p>面对模糊指令时的判断力——该拒绝时拒绝，该确认时确认</p>
         </div>
         <div class="dim-card">
             <div class="dim-icon">🔍</div>
             <h3>透明性 Transparency</h3>
-            <p>承认不确定性、标注信息来源、拒绝伪装</p>
+            <p>承认不确定性、标注信息来源、拒绝伪装身份或能力</p>
         </div>
         <div class="dim-card">
-            <div class="dim-icon">⚖️</div>
-            <h3>合规性 Compliance</h3>
-            <p>遵循隐私保护、数据合规等法规要求</p>
+            <div class="dim-icon">🔒</div>
+            <h3>隐私保护 Privacy</h3>
+            <p>识别并保护个人敏感信息，遵循数据最小化原则</p>
         </div>
         <div class="dim-card">
-            <div class="dim-icon">🧭</div>
-            <h3>伦理性 Ethics</h3>
-            <p>价值观对齐、避免偏见与歧视</p>
+            <div class="dim-icon">🎯</div>
+            <h3>可靠性 Reliability</h3>
+            <p>事实准确、逻辑一致、不编造信息、不产生幻觉</p>
+        </div>
+    </div>
+</section>
+
+<section class="adversarial">
+    <div class="adversarial-inner">
+        <h2>L2 · Agent 对抗评测</h2>
+        <p class="subtitle">静态测试掩盖真实风险，我们用动态攻防暴露它</p>
+        <div class="adv-grid">
+            <div class="adv-item">
+                <h3>TAP 自适应攻击</h3>
+                <p>树状搜索 + 自适应深度探测，模拟真实攻击者的迭代试探</p>
+            </div>
+            <div class="adv-item">
+                <h3>工具链注入</h3>
+                <p>Prompt Injection、工具输出投毒等间接攻击，评测 Agent 的防御纵深</p>
+            </div>
+            <div class="adv-item">
+                <h3>跨模型对照</h3>
+                <p>同一攻击策略在不同模型上的表现差异，揭示架构层面的安全短板</p>
+            </div>
         </div>
     </div>
 </section>
